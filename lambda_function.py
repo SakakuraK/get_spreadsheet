@@ -46,7 +46,8 @@ def lambda_handler(event, context):
                 #print(document_id)
                 # スプレッドシートにアクセス
                 #URLの後ろパラメーターID指定でアクセス スプレッドシートIDは、スプレッドシートのURLから「/d/」と「/edit」の間の部分
-                sheet = client.open_by_key(document_id).worksheet(target_worksheet)
+                #sheet = client.open_by_key(document_id).worksheet(target_worksheet)
+                sheet = client.open_by_key(document_id).get_worksheet(0)
             
                 # sheet.get_all_records()は、スプレッドシートの最初の行をフィールド名として扱い、それをキーとする辞書のリストを返します。
                 data = sheet.get_all_records()
