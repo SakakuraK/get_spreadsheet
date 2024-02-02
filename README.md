@@ -1,0 +1,2 @@
+# get_spreadsheet
+Googleスプレッドシートの内容を取り込んでjson形式でS3にアップするlambdaプログラムソース
